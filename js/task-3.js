@@ -1,10 +1,20 @@
 const findBestEmployee = function(employees) {
-  // твой код
+  
+  const entries = Object.entries(employees);
+  let bestEmployee = 0;
+  let nameEmployee;
+
+  for (let key in employees) {
+    if (bestEmployee < employees[key]) {
+      bestEmployee = employees[key];
+      nameEmployee = key;
+      }
+    }
+
+  return(nameEmployee)
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
+
 console.log(
   findBestEmployee({
     ann: 29,

@@ -1,10 +1,12 @@
 const countTotalSalary = function(employees) {
-  // твой код
+  let total = 0;
+  for (const value in employees) {
+    total += employees[value];
+  }
+ return(total);
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
+
 console.log(countTotalSalary({})); // 0
 
 console.log(

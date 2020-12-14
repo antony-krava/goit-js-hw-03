@@ -6,12 +6,19 @@ const products = [
 ];
 
 const calculateTotalPrice = function(allProdcuts, productName) {
-  // твой код
+  
+    for (let i = 0; allProdcuts.length > i; i++) {
+        let tempObject = allProdcuts[i];
+         if (tempObject.name === productName){
+            let totalСost = tempObject.price*tempObject.quantity
+            return(totalСost);
+        }
+      
+    }
+
 };
 
-/*
- * Вызовы функции для проверки работоспособности твоей реализации.
- */
+
 console.log(calculateTotalPrice(products, 'Радар')); // 5200
 
 console.log(calculateTotalPrice(products, 'Дроид')); // 2800
